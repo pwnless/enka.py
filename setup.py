@@ -7,7 +7,7 @@ setuptools.setup(
     description="Library for fetching JSON data from site https://enka.shinshin.moe/",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/mrwan200/enkanetwork-py",
+    url="https://github.com/pwnblog/enka.py",
     keywords=['enkapy.py', 'enkapy', 'enka.shinshin.moe', 'genshinapi'],
     packages=setuptools.find_packages(),
     classifiers=[
