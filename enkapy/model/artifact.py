@@ -4,9 +4,9 @@ from pydantic import BaseModel, Field
 
 
 class ArtifactProperty(BaseModel):
-    mainPropId: str = Field('')
-    statValue: int
-    appendPropId: str = Field('')
+    mainPropId: str = Field('', alias='mainPropId')
+    statValue: int = Field(0, alias='statValue')
+    appendPropId: str = Field('', alias='appendPropId')
 
     @property
     def prop(self):
@@ -31,6 +31,10 @@ class ArtifactFlat(BaseModel):
     sub_stats: List[ArtifactProperty] = Field({}, alias="reliquarySubstats")
     setNameTextMapHash: str
     setNameText: Optional[str] = Field('')
+
+    @property
+    def icon_url(self):
+        return f'https://enka.shinshin.moe/ui/{self.icon}.png'
 
 
 class ArtifactInfo(BaseModel):

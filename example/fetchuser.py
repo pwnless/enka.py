@@ -17,6 +17,7 @@ async def main():
         for artifact in character.artifacts:
             print(f'\t{artifact.flat.setNameText} {artifact.flat.nameText}:')
             print(f'\t{artifact.flat.main_stat.prop}:{artifact.flat.main_stat.value}')
+            print(f'\ticon: {artifact.flat.icon_url}')
             for sub_stats in artifact.flat.sub_stats:
                 print(f'\t\t{sub_stats.prop}:{sub_stats.value}')
 

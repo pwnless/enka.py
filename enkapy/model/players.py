@@ -1,4 +1,4 @@
-from typing import List
+from typing import List,Optional
 
 from pydantic import BaseModel
 
@@ -18,7 +18,7 @@ class PlayerInfo(BaseModel):
     level: int
     nameCardId: int
     nickname: str
-    signature: str
+    signature: Optional[str]
     worldLevel: int
     profilePicture: ProfilePicture
     # Avatars
