@@ -14,15 +14,15 @@ class ShowAvatar(BaseModel):
 
 class PlayerInfo(BaseModel):
     # Profile info
-    finishAchievementNum: int
+    finishAchievementNum: Optional[int]
     level: int
     nameCardId: int
     nickname: str
     signature: Optional[str]
-    worldLevel: int
+    worldLevel: Optional[int]
     profilePicture: ProfilePicture
     # Avatars
-    showAvatarInfoList: List[ShowAvatar]
+    showAvatarInfoList: Optional[List[ShowAvatar]]
     # Abyss floor
-    towerFloorIndex: int
-    towerLevelIndex: int
+    towerFloorIndex: Optional[int]
+    towerLevelIndex: Optional[int]

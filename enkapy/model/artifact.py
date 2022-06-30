@@ -40,7 +40,7 @@ class ArtifactFlat(BaseModel):
 class ArtifactInfo(BaseModel):
     level: int
     mainPropId: int
-    appendPropIdList: List[int]
+    appendPropIdList: Optional[List[int]] = Field([])
 
 
 class Artifact(BaseModel):
