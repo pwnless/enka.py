@@ -62,7 +62,7 @@ class Enka:
                 raise UIDNotFounded(f"UID {uid} not found.")
 
         obj = EnkaData.parse_obj(data)
-        if self.lang and self.lang_data[self.lang] and self.avatar_data:
+        if self.lang and self.lang in self.lang_data and self.lang_data[self.lang] and self.avatar_data:
             for character in obj.characters:
                 for equip in character.equipList:
                     equip.flat.nameText = await self.resolve_text_hash(equip.flat.nameTextMapHash, self.lang)

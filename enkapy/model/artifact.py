@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 
 class ArtifactProperty(BaseModel):
     mainPropId: str = Field('', alias='mainPropId')
-    statValue: int = Field(0, alias='statValue')
+    statValue: float = Field(0, alias='statValue')
     appendPropId: str = Field('', alias='appendPropId')
 
     @property
