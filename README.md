@@ -5,6 +5,10 @@ Added name parsing and full artifact support and more elegant code.
 
 original from https://github.com/mrwan200/EnkaNetwork.py
 
+# Documentation
+
+see http://enkapy.rtfd.io/
+
 # Installation
 ```
 pip install enka.py
@@ -20,7 +24,7 @@ client = Enka()
 
 
 async def main():
-    await client.load_lang() # load the lang data from remote repo, otherwise all names will be null string.
+    await client.load_lang()
     user = await client.fetch_user(700378769)
     print(f"Nickname: {user.player.nickname}")
     print(f"Level: {user.player.level}")
