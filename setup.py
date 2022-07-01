@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="enka.py",
-    version="1.0.2",
+    version="1.0.6",
     author="pwnblog",
     description="Library for fetching JSON data from site https://enka.shinshin.moe/",
     long_description=open("README.md", "r", encoding="utf-8").read(),
