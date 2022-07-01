@@ -9,20 +9,34 @@ class ProfilePicture(BaseModel):
 
 class ShowAvatar(BaseModel):
     avatarId: str
+    """Character id"""
     level: int
+    """Character level"""
 
 
 class PlayerInfo(BaseModel):
-    # Profile info
+    """
+    Player info class
+    """
     finishAchievementNum: Optional[int]
+    """Total achievement"""
     level: int
+    """Player level"""
     nameCardId: int
+    """Player name card background id"""
     nickname: str
+    """Player nickname"""
     signature: Optional[str]
+    """Player signature"""
     worldLevel: Optional[int]
+    """Player world level"""
     profilePicture: ProfilePicture
-    # Avatars
+    """Player profile picture"""
+
     showAvatarInfoList: Optional[List[ShowAvatar]]
-    # Abyss floor
+    """Player characters shown"""
+
     towerFloorIndex: Optional[int]
+    """Player abyss floor"""
     towerLevelIndex: Optional[int]
+    """Player abyss level"""

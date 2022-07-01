@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Welcome to enka.py’s documentation! &#8212; enka.py 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enkapy" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-enka-py-s-documentation">
+<h1>Welcome to enka.py’s documentation!<a class="headerlink" href="#welcome-to-enka-py-s-documentation" title="Permalink to this heading">¶</a></h1>
+<p>enka.py is a friendly API wrapper for <a class="reference external" href="https://enka.shinshin.moe/">https://enka.shinshin.moe/</a></p>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="kn">from</span> <span class="nn">enkapy</span> <span class="kn">import</span> <span class="n">Enka</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Enka</span><span class="p">()</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">load_lang</span><span class="p">()</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">fetch_user</span><span class="p">(</span><span class="mi">104267816</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nickname: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">nickname</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Level: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">user</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Name: </span><span class="si">{</span><span class="n">character</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Weapon: </span><span class="si">{</span><span class="n">character</span><span class="o">.</span><span class="n">weapon</span><span class="o">.</span><span class="n">nameText</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Artifacts:&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">artifact</span> <span class="ow">in</span> <span class="n">character</span><span class="o">.</span><span class="n">artifacts</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="si">{</span><span class="n">artifact</span><span class="o">.</span><span class="n">setNameText</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">artifact</span><span class="o">.</span><span class="n">nameText</span><span class="si">}</span><span class="s1">:&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t</span><span class="si">{</span><span class="n">artifact</span><span class="o">.</span><span class="n">main_stat</span><span class="o">.</span><span class="n">prop</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">artifact</span><span class="o">.</span><span class="n">main_stat</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">sub_stats</span> <span class="ow">in</span> <span class="n">artifact</span><span class="o">.</span><span class="n">sub_stats</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\t\t</span><span class="si">{</span><span class="n">sub_stats</span><span class="o">.</span><span class="n">prop</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">sub_stats</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nickname</span><span class="p">:</span> <span class="n">天天向上</span>
+<span class="n">Level</span><span class="p">:</span> <span class="mi">60</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Kamisato</span> <span class="n">Ayaka</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Mistsplitter</span> <span class="n">Reforged</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Blizzard</span> <span class="n">Strayer</span> <span class="n">Snowswept</span> <span class="n">Memory</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">44.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">38.1</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">16.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">3.9</span>
+    <span class="n">Blizzard</span> <span class="n">Strayer</span> <span class="n">Icebreaker</span><span class="s1">&#39;s Resolve:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">3.1</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">35.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">10.4</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">21.8</span>
+    <span class="n">Blizzard</span> <span class="n">Strayer</span> <span class="n">Frozen</span> <span class="n">Homeland</span><span class="s1">&#39;s Demise:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">8.7</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">18.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">13.2</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">10.5</span>
+    <span class="n">Archaic</span> <span class="n">Petra</span> <span class="n">Goblet</span> <span class="n">of</span> <span class="n">Chiseled</span> <span class="n">Crag</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ICE_ADD_HURT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">16.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">25.7</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">10.5</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.4</span>
+    <span class="n">Blizzard</span> <span class="n">Strayer</span> <span class="n">Broken</span> <span class="n">Rime</span><span class="s1">&#39;s Echo:</span>
+    <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">62.2</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">11.7</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">9.3</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">42.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">35.0</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Yelan</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Aqua</span> <span class="n">Simulacra</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Magnificent</span> <span class="n">Tsuba</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">5.3</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">37.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">26.4</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.4</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Sundered</span> <span class="n">Feather</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">10.5</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">10.1</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">13.2</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">11.0</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Storm</span> <span class="n">Cage</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">51.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">13.2</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">4.1</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">1105.0</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Scarlet</span> <span class="n">Vessel</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">22.5</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">9.7</span>
+        <span class="n">FIGHT_PROP_DEFENSE_PERCENT</span><span class="p">:</span><span class="mf">14.6</span>
+    <span class="n">Crimson</span> <span class="n">Witch</span> <span class="n">of</span> <span class="n">Flames</span> <span class="n">Witch</span><span class="s1">&#39;s Scorching Hat:</span>
+    <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">31.1</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">478.0</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">10.5</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">19.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">20.2</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Kamisato</span> <span class="n">Ayato</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Haran</span> <span class="n">Geppaku</span> <span class="n">Futsu</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Heart</span> <span class="n">of</span> <span class="n">Depth</span> <span class="n">Gilded</span> <span class="n">Corsage</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">21.8</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">5.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">9.3</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">14.0</span>
+    <span class="n">Ocean</span><span class="o">-</span><span class="n">Hued</span> <span class="n">Clam</span> <span class="n">Deep</span> <span class="n">Palace</span><span class="s1">&#39;s Plume:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">5.3</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">10.5</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">21.8</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">299.0</span>
+    <span class="n">Heart</span> <span class="n">of</span> <span class="n">Depth</span> <span class="n">Copper</span> <span class="n">Compass</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">209.0</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">8.2</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">20.2</span>
+    <span class="n">Heart</span> <span class="n">of</span> <span class="n">Depth</span> <span class="n">Goblet</span> <span class="n">of</span> <span class="n">Thundering</span> <span class="n">Deep</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_WATER_ADD_HURT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">6.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">26.4</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">5.2</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">4.1</span>
+    <span class="n">Heart</span> <span class="n">of</span> <span class="n">Depth</span> <span class="n">Wine</span><span class="o">-</span><span class="n">Stained</span> <span class="n">Tricorne</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">62.2</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">11.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">9.3</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">35.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">6.6</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Eula</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Song</span> <span class="n">of</span> <span class="n">Broken</span> <span class="n">Pines</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Pale</span> <span class="n">Flame</span> <span class="n">Stainless</span> <span class="n">Bloom</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">5.4</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">14.8</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">4.1</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">29.0</span>
+    <span class="n">Bloodstained</span> <span class="n">Chivalry</span> <span class="n">Bloodstained</span> <span class="n">Black</span> <span class="n">Plume</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">16.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">21.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">26.4</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.0</span>
+    <span class="n">Bloodstained</span> <span class="n">Chivalry</span> <span class="n">Bloodstained</span> <span class="n">Final</span> <span class="n">Hour</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">10.9</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">15.5</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">19.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">7.8</span>
+    <span class="n">Lavawalker</span> <span class="n">Lavawalker</span><span class="s1">&#39;s Epiphany:</span>
+    <span class="n">FIGHT_PROP_PHYSICAL_ADD_HURT</span><span class="p">:</span><span class="mf">58.3</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">13.2</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">14.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">4.1</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">19.0</span>
+    <span class="n">Pale</span> <span class="n">Flame</span> <span class="n">Mocking</span> <span class="n">Mask</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">31.1</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">508.0</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">40.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">14.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">6.2</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Shenhe</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Calamity</span> <span class="n">Queller</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Gladiator</span><span class="s1">&#39;s Finale Gladiator&#39;</span><span class="n">s</span> <span class="n">Nostalgia</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">14.9</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">7.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.8</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">17.5</span>
+    <span class="n">Shimenawa</span><span class="s1">&#39;s Reminiscence Shaft of Remembrance:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">3.1</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">5.3</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">29.5</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">10.4</span>
+    <span class="n">Noblesse</span> <span class="n">Oblige</span> <span class="n">Royal</span> <span class="n">Pocket</span> <span class="n">Watch</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">21.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">6.6</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">16.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">23.3</span>
+    <span class="n">Gladiator</span><span class="s1">&#39;s Finale Gladiator&#39;</span><span class="n">s</span> <span class="n">Intoxication</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">508.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">28.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">3.9</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">11.0</span>
+    <span class="n">Shimenawa</span><span class="s1">&#39;s Reminiscence Capricious Visage:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">44.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">22.5</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">18.0</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Raiden</span> <span class="n">Shogun</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Engulfing</span> <span class="n">Lightning</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Magnificent</span> <span class="n">Tsuba</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">17.5</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">19.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">6.2</span>
+        <span class="n">FIGHT_PROP_DEFENSE_PERCENT</span><span class="p">:</span><span class="mf">5.8</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Sundered</span> <span class="n">Feather</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">13.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">6.2</span>
+        <span class="n">FIGHT_PROP_DEFENSE_PERCENT</span><span class="p">:</span><span class="mf">7.3</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">25.6</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Storm</span> <span class="n">Cage</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">51.8</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">18.7</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">18.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.4</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">35.0</span>
+    <span class="n">Gladiator</span><span class="s1">&#39;s Finale Gladiator&#39;</span><span class="n">s</span> <span class="n">Intoxication</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ELEC_ADD_HURT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">16.3</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">11.7</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">5.4</span>
+        <span class="n">FIGHT_PROP_DEFENSE_PERCENT</span><span class="p">:</span><span class="mf">7.3</span>
+    <span class="n">Emblem</span> <span class="n">of</span> <span class="n">Severed</span> <span class="n">Fate</span> <span class="n">Ornate</span> <span class="n">Kabuto</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">31.1</span>
+        <span class="n">FIGHT_PROP_DEFENSE_PERCENT</span><span class="p">:</span><span class="mf">7.3</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">17.5</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">10.4</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">14.8</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Kaedehara</span> <span class="n">Kazuha</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Freedom</span><span class="o">-</span><span class="n">Sworn</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Viridescent</span> <span class="n">Venerer</span> <span class="n">In</span> <span class="n">Remembrance</span> <span class="n">of</span> <span class="n">Viridescent</span> <span class="n">Fields</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">40.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.0</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">14.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">17.9</span>
+    <span class="n">Viridescent</span> <span class="n">Venerer</span> <span class="n">Viridescent</span> <span class="n">Arrow</span> <span class="n">Feather</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">39.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">10.9</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">63.0</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">538.0</span>
+    <span class="n">Viridescent</span> <span class="n">Venerer</span> <span class="n">Viridescent</span> <span class="n">Venerer</span><span class="s1">&#39;s Determination:</span>
+    <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">187.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">5.8</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">15.7</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">598.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">39.0</span>
+    <span class="n">Viridescent</span> <span class="n">Venerer</span> <span class="n">Viridescent</span> <span class="n">Venerer</span><span class="s1">&#39;s Vessel:</span>
+    <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">187.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">4.1</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">18.7</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">299.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">63.0</span>
+    <span class="n">Wanderer</span><span class="s1">&#39;s Troupe Conductor&#39;</span><span class="n">s</span> <span class="n">Top</span> <span class="n">Hat</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">187.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">8.2</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">14.0</span>
+        <span class="n">FIGHT_PROP_CHARGE_EFFICIENCY</span><span class="p">:</span><span class="mf">6.5</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">21.0</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">Yae</span> <span class="n">Miko</span>
+<span class="n">Weapon</span><span class="p">:</span> <span class="n">Kagura</span><span class="s1">&#39;s Verity</span>
+<span class="n">Artifacts</span><span class="p">:</span>
+    <span class="n">Gladiator</span><span class="s1">&#39;s Finale Gladiator&#39;</span><span class="n">s</span> <span class="n">Nostalgia</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">4780.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.8</span>
+        <span class="n">FIGHT_PROP_HP_PERCENT</span><span class="p">:</span><span class="mf">11.1</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">35.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">20.2</span>
+    <span class="n">Thundering</span> <span class="n">Fury</span> <span class="n">Survivor</span> <span class="n">of</span> <span class="n">Catastrophe</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">311.0</span>
+        <span class="n">FIGHT_PROP_DEFENSE</span><span class="p">:</span><span class="mf">37.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">7.4</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">478.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">18.7</span>
+    <span class="n">Thundering</span> <span class="n">Fury</span> <span class="n">Hourglass</span> <span class="n">of</span> <span class="n">Thunder</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">33.0</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">568.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">21.8</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">19.0</span>
+    <span class="n">Wanderer</span><span class="s1">&#39;s Troupe Wanderer&#39;</span><span class="n">s</span> <span class="n">String</span><span class="o">-</span><span class="n">Kettle</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_ELEC_ADD_HURT</span><span class="p">:</span><span class="mf">46.6</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">19.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">28.8</span>
+        <span class="n">FIGHT_PROP_HP</span><span class="p">:</span><span class="mf">777.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">3.9</span>
+    <span class="n">Gladiator</span><span class="s1">&#39;s Finale Gladiator&#39;</span><span class="n">s</span> <span class="n">Triumphus</span><span class="p">:</span>
+    <span class="n">FIGHT_PROP_CRITICAL</span><span class="p">:</span><span class="mf">31.1</span>
+        <span class="n">FIGHT_PROP_ELEMENT_MASTERY</span><span class="p">:</span><span class="mf">33.0</span>
+        <span class="n">FIGHT_PROP_ATTACK_PERCENT</span><span class="p">:</span><span class="mf">8.7</span>
+        <span class="n">FIGHT_PROP_ATTACK</span><span class="p">:</span><span class="mf">37.0</span>
+        <span class="n">FIGHT_PROP_CRITICAL_HURT</span><span class="p">:</span><span class="mf">12.4</span>
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">enkapy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enkapy.html">enkapy package</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">enka.py</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">enkapy</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="modules.html" title="next chapter">enkapy</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, pwnblog.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

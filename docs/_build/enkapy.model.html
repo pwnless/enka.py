@@ -1,0 +1,1176 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>enkapy.model package &#8212; enka.py 1.0.6 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="enkapy package" href="enkapy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="enkapy-model-package">
+<h1>enkapy.model package<a class="headerlink" href="#enkapy-model-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-enkapy.model.artifact">
+<span id="enkapy-model-artifact-module"></span><h2>enkapy.model.artifact module<a class="headerlink" href="#module-enkapy.model.artifact" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.artifact.Artifact">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.artifact.</span></span><span class="sig-name descname"><span class="pre">Artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itemId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reliquary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.artifact.ArtifactInfo" title="enkapy.model.artifact.ArtifactInfo"><span class="pre">ArtifactInfo</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.artifact.ArtifactFlat" title="enkapy.model.artifact.ArtifactFlat"><span class="pre">ArtifactFlat</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.artifact.Artifact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Artifact information class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.Artifact.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.artifact.ArtifactInfo" title="enkapy.model.artifact.ArtifactInfo"><span class="pre">ArtifactInfo</span></a></em><a class="headerlink" href="#enkapy.model.artifact.Artifact.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some Artifact info like upgrade level, upgrade value etc.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.Artifact.flat">
+<span class="sig-name descname"><span class="pre">flat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.artifact.ArtifactFlat" title="enkapy.model.artifact.ArtifactFlat"><span class="pre">ArtifactFlat</span></a></em><a class="headerlink" href="#enkapy.model.artifact.Artifact.flat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact flat info class, anything inside flat can be access directly in Artifact class too.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.Artifact.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.artifact.Artifact.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact id</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.artifact.Artifact.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#enkapy.model.artifact.Artifact.level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact level</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.artifact.</span></span><span class="sig-name descname"><span class="pre">ArtifactFlat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equipType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itemType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameTextMapHash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameText</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rankLevel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reliquaryMainstat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.artifact.ArtifactProperty" title="enkapy.model.artifact.ArtifactProperty"><span class="pre">ArtifactProperty</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reliquarySubstats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.artifact.ArtifactProperty" title="enkapy.model.artifact.ArtifactProperty"><span class="pre">ArtifactProperty</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setNameTextMapHash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setNameText</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.equipType">
+<span class="sig-name descname"><span class="pre">equipType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.equipType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact equip types</p>
+<p>EQUIP_BRACER: flower</p>
+<p>EQUIP_NECKLACE: feather</p>
+<p>EQUIP_SHOES: sand</p>
+<p>EQUIP_RING: goblet</p>
+<p>EQUIP_DRESS: circlet</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.icon">
+<span class="sig-name descname"><span class="pre">icon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact icon</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.icon_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">icon_url</span></span><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.icon_url" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Artifact icon url from <a class="reference external" href="https://enka.shinshin.moe/ui/">https://enka.shinshin.moe/ui/</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.itemType">
+<span class="sig-name descname"><span class="pre">itemType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.itemType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact item type, mostly ‘ITEM_RELIQUARY’</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.main_stat">
+<span class="sig-name descname"><span class="pre">main_stat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.artifact.ArtifactProperty" title="enkapy.model.artifact.ArtifactProperty"><span class="pre">ArtifactProperty</span></a></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.main_stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact main stats</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.nameText">
+<span class="sig-name descname"><span class="pre">nameText</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.nameText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact name text</p>
+<p><em>Note: You must called load_lang before otherwise this field is empty</em></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.nameTextMapHash">
+<span class="sig-name descname"><span class="pre">nameTextMapHash</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.nameTextMapHash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact name hash</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.rankLevel">
+<span class="sig-name descname"><span class="pre">rankLevel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.rankLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact rank, 5/4/3/2/1 star</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.setNameText">
+<span class="sig-name descname"><span class="pre">setNameText</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.setNameText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact set name text</p>
+<p><em>Note: You must called load_lang before otherwise this field is empty</em></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.setNameTextMapHash">
+<span class="sig-name descname"><span class="pre">setNameTextMapHash</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.setNameTextMapHash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact name hash</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactFlat.sub_stats">
+<span class="sig-name descname"><span class="pre">sub_stats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.artifact.ArtifactProperty" title="enkapy.model.artifact.ArtifactProperty"><span class="pre">ArtifactProperty</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactFlat.sub_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact sub stats</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.artifact.</span></span><span class="sig-name descname"><span class="pre">ArtifactInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainPropId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appendPropIdList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.artifact.ArtifactInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactInfo.appendPropIdList">
+<span class="sig-name descname"><span class="pre">appendPropIdList</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactInfo.appendPropIdList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactInfo.level">
+<span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactInfo.level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactInfo.mainPropId">
+<span class="sig-name descname"><span class="pre">mainPropId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactInfo.mainPropId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.artifact.</span></span><span class="sig-name descname"><span class="pre">ArtifactProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainPropId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appendPropId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty.appendPropId">
+<span class="sig-name descname"><span class="pre">appendPropId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty.appendPropId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty.mainPropId">
+<span class="sig-name descname"><span class="pre">mainPropId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty.mainPropId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty.prop">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prop</span></span><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty.prop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact property</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty.statValue">
+<span class="sig-name descname"><span class="pre">statValue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty.statValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.artifact.ArtifactProperty.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#enkapy.model.artifact.ArtifactProperty.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Artifact property value</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-enkapy.model.character">
+<span id="enkapy-model-character-module"></span><h2>enkapy.model.character module<a class="headerlink" href="#module-enkapy.model.character" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterFriendshipLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.character.</span></span><span class="sig-name descname"><span class="pre">CharacterFriendshipLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expLevel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.character.CharacterFriendshipLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterFriendshipLevel.level">
+<span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.character.CharacterFriendshipLevel.level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.character.</span></span><span class="sig-name descname"><span class="pre">CharacterInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatarId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fetterInfo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.character.CharacterFriendshipLevel" title="enkapy.model.character.CharacterFriendshipLevel"><span class="pre">CharacterFriendshipLevel</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">propMap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.character.CharacterProperty" title="enkapy.model.character.CharacterProperty"><span class="pre">CharacterProperty</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equipList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.artifact.Artifact" title="enkapy.model.artifact.Artifact"><span class="pre">Artifact</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.weapon.Weapon" title="enkapy.model.weapon.Weapon"><span class="pre">Weapon</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fightPropMap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.combats.CharacterCombat" title="enkapy.model.combats.CharacterCombat"><span class="pre">CharacterCombat</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inherentProudSkillList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillDepotId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">talentIdList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skillLevelMap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.character.CharacterInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Character info class for every character shown in game</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.artifacts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">artifacts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.artifact.Artifact" title="enkapy.model.artifact.Artifact"><span class="pre">Artifact</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.artifacts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Artifact lists equipped on character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.combat">
+<span class="sig-name descname"><span class="pre">combat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.combats.CharacterCombat" title="enkapy.model.combats.CharacterCombat"><span class="pre">CharacterCombat</span></a></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.combat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character combat stats</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.equipList">
+<span class="sig-name descname"><span class="pre">equipList</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.artifact.Artifact" title="enkapy.model.artifact.Artifact"><span class="pre">Artifact</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.weapon.Weapon" title="enkapy.model.weapon.Weapon"><span class="pre">Weapon</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.equipList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Everything equipped on character, including artifacts and weapon</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.friendship">
+<span class="sig-name descname"><span class="pre">friendship</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.character.CharacterFriendshipLevel" title="enkapy.model.character.CharacterFriendshipLevel"><span class="pre">CharacterFriendshipLevel</span></a></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.friendship" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character friendship</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character avatar id for fetching more detail later</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.inherentProudSkillList">
+<span class="sig-name descname"><span class="pre">inherentProudSkillList</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.inherentProudSkillList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.properties">
+<span class="sig-name descname"><span class="pre">properties</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.character.CharacterProperty" title="enkapy.model.character.CharacterProperty"><span class="pre">CharacterProperty</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some character properties like xp, ascension , level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.skillDepotId">
+<span class="sig-name descname"><span class="pre">skillDepotId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.skillDepotId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.skill_data">
+<span class="sig-name descname"><span class="pre">skill_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.skill_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character skill data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.skill_id">
+<span class="sig-name descname"><span class="pre">skill_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.skill_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.skill_level">
+<span class="sig-name descname"><span class="pre">skill_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.skill_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character skill level map, skill_id:skill_level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.talents">
+<span class="sig-name descname"><span class="pre">talents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.talents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character talents</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterInfo.weapon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">weapon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.weapon.Weapon" title="enkapy.model.weapon.Weapon"><span class="pre">Weapon</span></a></em><a class="headerlink" href="#enkapy.model.character.CharacterInfo.weapon" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>weapon equipped on character</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.character.</span></span><span class="sig-name descname"><span class="pre">CharacterProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.character.CharacterPropertyType" title="enkapy.model.character.CharacterPropertyType"><span class="pre">CharacterPropertyType</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ival</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.character.CharacterProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.Config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#enkapy.model.character.CharacterProperty.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.Config.use_enum_values">
+<span class="sig-name descname"><span class="pre">use_enum_values</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#enkapy.model.character.CharacterProperty.Config.use_enum_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.check_type">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.character.CharacterProperty.check_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.ival">
+<span class="sig-name descname"><span class="pre">ival</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.character.CharacterProperty.ival" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.character.CharacterPropertyType" title="enkapy.model.character.CharacterPropertyType"><span class="pre">CharacterPropertyType</span></a></em><a class="headerlink" href="#enkapy.model.character.CharacterProperty.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterProperty.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.character.CharacterProperty.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterPropertyType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.character.</span></span><span class="sig-name descname"><span class="pre">CharacterPropertyType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.character.CharacterPropertyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterPropertyType.ASCENSION">
+<span class="sig-name descname"><span class="pre">ASCENSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1002</span></em><a class="headerlink" href="#enkapy.model.character.CharacterPropertyType.ASCENSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterPropertyType.LEVEL">
+<span class="sig-name descname"><span class="pre">LEVEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4001</span></em><a class="headerlink" href="#enkapy.model.character.CharacterPropertyType.LEVEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterPropertyType.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#enkapy.model.character.CharacterPropertyType.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.character.CharacterPropertyType.XP">
+<span class="sig-name descname"><span class="pre">XP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1001</span></em><a class="headerlink" href="#enkapy.model.character.CharacterPropertyType.XP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-enkapy.model.combats">
+<span id="enkapy-model-combats-module"></span><h2>enkapy.model.combats module<a class="headerlink" href="#module-enkapy.model.combats" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.combats.</span></span><span class="sig-name descname"><span class="pre">CharacterCombat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RAW</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.combats.CharacterCombat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.BASE_HP">
+<span class="sig-name descname"><span class="pre">BASE_HP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.BASE_HP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ANTI_CRITICAL">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ANTI_CRITICAL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ANTI_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ATTACK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK_MP_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ATTACK_MP_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK_MP_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ATTACK_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ATTACK_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_ATTACK">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_BASE_ATTACK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_ATTACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_DEFENSE">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_BASE_DEFENSE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_DEFENSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_SPEED">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_BASE_SPEED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_BASE_SPEED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CHARGE_EFFICIENCY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CHARGE_EFFICIENCY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CHARGE_EFFICIENCY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CRITICAL">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CRITICAL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CRITICAL_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CRITICAL_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CRITICAL_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ATTACK">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_ATTACK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ATTACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_DEFENSE">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_DEFENSE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_DEFENSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ELEC_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_ELEC_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ELEC_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_FIRE_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_FIRE_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_FIRE_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_GRASS_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_GRASS_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_GRASS_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_HP">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_HP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_HP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ICE_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_ICE_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ICE_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ROCK_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_ROCK_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_ROCK_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_SPEED">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_SPEED</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_SPEED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_WATER_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_WATER_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_WATER_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_WIND_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_CUR_WIND_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_CUR_WIND_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENCE_IGNORE_DELTA">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DEFENCE_IGNORE_DELTA</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENCE_IGNORE_DELTA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENCE_IGNORE_RATIO">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DEFENCE_IGNORE_RATIO</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENCE_IGNORE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENSE">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DEFENSE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENSE_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DEFENSE_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DEFENSE_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DIZZY_RESIST">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DIZZY_RESIST</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DIZZY_RESIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_DIZZY_SHORTEN">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_DIZZY_SHORTEN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_DIZZY_SHORTEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_EFFECT_HIT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_EFFECT_HIT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_EFFECT_HIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_EFFECT_RESIST">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_EFFECT_RESIST</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_EFFECT_RESIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEC_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ELEC_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEC_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEC_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ELEC_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEC_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEMENT_MASTERY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ELEMENT_MASTERY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ELEMENT_MASTERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_FIRE_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_FIRE_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_FIRE_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_FIRE_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_FIRE_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_FIRE_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_FREEZE_RESIST">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_FREEZE_RESIST</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_FREEZE_RESIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_FREEZE_SHORTEN">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_FREEZE_SHORTEN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_FREEZE_SHORTEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_GRASS_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_GRASS_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_GRASS_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_GRASS_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_GRASS_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_GRASS_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HEALED_ADD">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HEALED_ADD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HEALED_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HEAL_ADD">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HEAL_ADD</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HEAL_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HIT_HEAD_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HIT_HEAD_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HIT_HEAD_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP_MP_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HP_MP_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP_MP_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_HP_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_HP_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ICE_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ICE_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ICE_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ICE_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ICE_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ICE_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ELEC_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_ELEC_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ELEC_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_FIRE_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_FIRE_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_FIRE_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_GRASS_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_GRASS_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_GRASS_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_HP">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_HP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_HP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ICE_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_ICE_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ICE_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ROCK_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_ROCK_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_ROCK_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_WATER_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_WATER_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_WATER_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_WIND_ENERGY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_MAX_WIND_ENERGY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_MAX_WIND_ENERGY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ATTACK">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ATTACK</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ATTACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CRITICAL">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_CRITICAL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CRITICAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CRITICAL_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_CRITICAL_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_CRITICAL_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_DEFENSE">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_DEFENSE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_DEFENSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEC_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ELEC_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEC_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEC_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ELEC_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEC_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEMENT_MASTERY">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ELEMENT_MASTERY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ELEMENT_MASTERY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_FIRE_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_FIRE_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_FIRE_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_FIRE_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_FIRE_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_FIRE_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_GRASS_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_GRASS_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_GRASS_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_GRASS_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_GRASS_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_GRASS_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ICE_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ICE_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ICE_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ICE_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ICE_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ICE_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_PHYSICAL_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_PHYSICAL_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_PHYSICAL_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_PHYSICAL_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_PHYSICAL_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_PHYSICAL_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ROCK_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ROCK_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ROCK_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ROCK_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_ROCK_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_ROCK_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_SHIELD_COST_MINUS_RATIO">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_SHIELD_COST_MINUS_RATIO</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_SHIELD_COST_MINUS_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_SKILL_CD_MINUS_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WATER_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_WATER_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WATER_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WATER_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_WATER_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WATER_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WIND_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_WIND_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WIND_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WIND_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_NONEXTRA_WIND_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_NONEXTRA_WIND_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_PHYSICAL_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_PHYSICAL_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_PHYSICAL_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_PHYSICAL_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_PHYSICAL_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_PHYSICAL_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ROCK_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ROCK_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ROCK_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_ROCK_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_ROCK_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_ROCK_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_SHIELD_COST_MINUS_RATIO">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_SHIELD_COST_MINUS_RATIO</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_SHIELD_COST_MINUS_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_SKILL_CD_MINUS_RATIO">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_SKILL_CD_MINUS_RATIO</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_SKILL_CD_MINUS_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_SPEED_PERCENT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_SPEED_PERCENT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_SPEED_PERCENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_TORPOR_RESIST">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_TORPOR_RESIST</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_TORPOR_RESIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_TORPOR_SHORTEN">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_TORPOR_SHORTEN</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_TORPOR_SHORTEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_WATER_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_WATER_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_WATER_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_WATER_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_WATER_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_WATER_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_WIND_ADD_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_WIND_ADD_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_WIND_ADD_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.FIGHT_PROP_WIND_SUB_HURT">
+<span class="sig-name descname"><span class="pre">FIGHT_PROP_WIND_SUB_HURT</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.FIGHT_PROP_WIND_SUB_HURT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.combats.CharacterCombat.RAW">
+<span class="sig-name descname"><span class="pre">RAW</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#enkapy.model.combats.CharacterCombat.RAW" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-enkapy.model.players">
+<span id="enkapy-model-players-module"></span><h2>enkapy.model.players module<a class="headerlink" href="#module-enkapy.model.players" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.players.</span></span><span class="sig-name descname"><span class="pre">PlayerInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">finishAchievementNum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameCardId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nickname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">worldLevel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profilePicture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.players.ProfilePicture" title="enkapy.model.players.ProfilePicture"><span class="pre">ProfilePicture</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">showAvatarInfoList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.players.ShowAvatar" title="enkapy.model.players.ShowAvatar"><span class="pre">ShowAvatar</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">towerFloorIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">towerLevelIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.players.PlayerInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Player info class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.finishAchievementNum">
+<span class="sig-name descname"><span class="pre">finishAchievementNum</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.finishAchievementNum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total achievement</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.level">
+<span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.nameCardId">
+<span class="sig-name descname"><span class="pre">nameCardId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.nameCardId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player name card background id</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.nickname">
+<span class="sig-name descname"><span class="pre">nickname</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.nickname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player nickname</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.profilePicture">
+<span class="sig-name descname"><span class="pre">profilePicture</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.players.ProfilePicture" title="enkapy.model.players.ProfilePicture"><span class="pre">ProfilePicture</span></a></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.profilePicture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player profile picture</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.showAvatarInfoList">
+<span class="sig-name descname"><span class="pre">showAvatarInfoList</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.players.ShowAvatar" title="enkapy.model.players.ShowAvatar"><span class="pre">ShowAvatar</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.showAvatarInfoList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player characters shown</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.signature">
+<span class="sig-name descname"><span class="pre">signature</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player signature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.towerFloorIndex">
+<span class="sig-name descname"><span class="pre">towerFloorIndex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.towerFloorIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player abyss floor</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.towerLevelIndex">
+<span class="sig-name descname"><span class="pre">towerLevelIndex</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.towerLevelIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player abyss level</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.PlayerInfo.worldLevel">
+<span class="sig-name descname"><span class="pre">worldLevel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.players.PlayerInfo.worldLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Player world level</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.players.ProfilePicture">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.players.</span></span><span class="sig-name descname"><span class="pre">ProfilePicture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatarId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.players.ProfilePicture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.ProfilePicture.avatarId">
+<span class="sig-name descname"><span class="pre">avatarId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.players.ProfilePicture.avatarId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.players.ShowAvatar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.players.</span></span><span class="sig-name descname"><span class="pre">ShowAvatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatarId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.players.ShowAvatar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.ShowAvatar.avatarId">
+<span class="sig-name descname"><span class="pre">avatarId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.players.ShowAvatar.avatarId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character id</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.players.ShowAvatar.level">
+<span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.players.ShowAvatar.level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Character level</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-enkapy.model.weapon">
+<span id="enkapy-model-weapon-module"></span><h2>enkapy.model.weapon module<a class="headerlink" href="#module-enkapy.model.weapon" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.weapon.Weapon">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.weapon.</span></span><span class="sig-name descname"><span class="pre">Weapon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itemId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weapon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.weapon.WeaponInfo" title="enkapy.model.weapon.WeaponInfo"><span class="pre">WeaponInfo</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.weapon.WeaponFlat" title="enkapy.model.weapon.WeaponFlat"><span class="pre">WeaponFlat</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.weapon.Weapon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Weapon info class</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.Weapon.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.weapon.WeaponInfo" title="enkapy.model.weapon.WeaponInfo"><span class="pre">WeaponInfo</span></a></em><a class="headerlink" href="#enkapy.model.weapon.Weapon.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weapon data</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.Weapon.flat">
+<span class="sig-name descname"><span class="pre">flat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.weapon.WeaponFlat" title="enkapy.model.weapon.WeaponFlat"><span class="pre">WeaponFlat</span></a></em><a class="headerlink" href="#enkapy.model.weapon.Weapon.flat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weapon flat data, anything inside flat can be access directly in Weapon class too.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.Weapon.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.weapon.Weapon.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weapon id</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="enkapy.model.weapon.Weapon.level">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#enkapy.model.weapon.Weapon.level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weapon level</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.weapon.</span></span><span class="sig-name descname"><span class="pre">WeaponFlat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itemType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameTextMapHash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nameText</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rankLevel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weaponStats</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.weapon.WeaponStats" title="enkapy.model.weapon.WeaponStats"><span class="pre">WeaponStats</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.icon">
+<span class="sig-name descname"><span class="pre">icon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.icon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.itemType">
+<span class="sig-name descname"><span class="pre">itemType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.itemType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.nameText">
+<span class="sig-name descname"><span class="pre">nameText</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.nameText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.nameTextMapHash">
+<span class="sig-name descname"><span class="pre">nameTextMapHash</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.nameTextMapHash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.rankLevel">
+<span class="sig-name descname"><span class="pre">rankLevel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.rankLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponFlat.weaponStats">
+<span class="sig-name descname"><span class="pre">weaponStats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.weapon.WeaponStats" title="enkapy.model.weapon.WeaponStats"><span class="pre">WeaponStats</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponFlat.weaponStats" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.weapon.</span></span><span class="sig-name descname"><span class="pre">WeaponInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affixMap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">promoteLevel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.weapon.WeaponInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponInfo.affixMap">
+<span class="sig-name descname"><span class="pre">affixMap</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponInfo.affixMap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponInfo.level">
+<span class="sig-name descname"><span class="pre">level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponInfo.level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponInfo.promoteLevel">
+<span class="sig-name descname"><span class="pre">promoteLevel</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponInfo.promoteLevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponStats">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.weapon.</span></span><span class="sig-name descname"><span class="pre">WeaponStats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">appendPropId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">statValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.weapon.WeaponStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponStats.appendPropId">
+<span class="sig-name descname"><span class="pre">appendPropId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponStats.appendPropId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.weapon.WeaponStats.statValue">
+<span class="sig-name descname"><span class="pre">statValue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.weapon.WeaponStats.statValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-enkapy.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-enkapy.model" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="enkapy.model.EnkaData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enkapy.model.</span></span><span class="sig-name descname"><span class="pre">EnkaData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playerInfo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#enkapy.model.players.PlayerInfo" title="enkapy.model.players.PlayerInfo"><span class="pre">PlayerInfo</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avatarInfoList</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.character.CharacterInfo" title="enkapy.model.character.CharacterInfo"><span class="pre">CharacterInfo</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enkapy.model.EnkaData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.EnkaData.characters">
+<span class="sig-name descname"><span class="pre">characters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#enkapy.model.character.CharacterInfo" title="enkapy.model.character.CharacterInfo"><span class="pre">CharacterInfo</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#enkapy.model.EnkaData.characters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.EnkaData.player">
+<span class="sig-name descname"><span class="pre">player</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#enkapy.model.players.PlayerInfo" title="enkapy.model.players.PlayerInfo"><span class="pre">PlayerInfo</span></a></em><a class="headerlink" href="#enkapy.model.EnkaData.player" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="enkapy.model.EnkaData.ttl">
+<span class="sig-name descname"><span class="pre">ttl</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#enkapy.model.EnkaData.ttl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">enka.py</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">enkapy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="enkapy.html">enkapy package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">enkapy</a><ul>
+  <li><a href="enkapy.html">enkapy package</a><ul>
+      <li>Previous: <a href="enkapy.html" title="previous chapter">enkapy package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, pwnblog.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/enkapy.model.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

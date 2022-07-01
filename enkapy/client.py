@@ -13,13 +13,23 @@ class Enka:
     LANG_URL = 'https://raw.githubusercontent.com/Dimbreath/GenshinData/master/TextMap/TextMap{lang}.json'
     AVATAR_URL = 'https://raw.githubusercontent.com/Dimbreath/GenshinData/master/ExcelBinOutput/AvatarExcelConfigData.json'
     USER_AGENT = "Mozilla/5.0"
-    timeout = 5
+    timeout = 30
+    """Http connection timeout"""
     proxy = ''
+    """Http connection proxy"""
     lang_data = {}
+    """Internal language data"""
     avatar_data = {}
+    """Internal avatar data"""
     lang = 'en'
+    """Language for text hash resolve"""
 
     async def load_lang(self, lang='en'):
+        """
+        Load language data from Dimbreath repo
+        :param lang: language you want to load, default 'en'
+        :return:
+        """
         async with aiohttp.ClientSession(headers={"User-Agent": self.USER_AGENT}) as client:
             if lang not in self.lang_data:
                 resp = await client.get(self.LANG_URL.format(lang=lang.upper()), proxy=self.proxy)
@@ -30,6 +40,12 @@ class Enka:
                     self.avatar_data[x['id']] = x
 
     async def resolve_text_hash(self, text_hash, lang='en'):
+        """
+        Resolve text hash to actual text
+        :param text_hash: text hash
+        :param lang: language you want to resolve to
+        :return: resolved text
+        """
         if lang not in self.lang_data:
             await self.load_lang(lang)
         if not isinstance(text_hash, str):
@@ -41,6 +57,11 @@ class Enka:
 
     @cached(ttl=600)
     async def fetch_user(self, uid: int) -> EnkaData:
+        """
+        Fetch user data from enka api, resolve text hash if available
+        :param uid: user in game uid
+        :return: EnkaData oject
+        """
         if not isinstance(uid, int):
             try:
                 uid = int(uid)
