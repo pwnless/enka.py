@@ -7,6 +7,14 @@ Welcome to enka.py's documentation!
 ===================================
 enka.py is a friendly API wrapper for https://enka.shinshin.moe/
 
+https://enka.shinshin.moe/ is a awesome website for fetching genshin impact user data
+
+Install
+-------
+.. code-block:: sh
+
+   pip3 install enka.py
+
 Example
 -------
 .. code-block:: python
@@ -312,6 +320,7 @@ Output
    :maxdepth: 2
    :caption: Contents:
 
+   Github<https://github.com/pwnblog/enka.py>
    modules
 
 Indices and tables
