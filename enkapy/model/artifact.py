@@ -9,7 +9,7 @@ class ArtifactProperty(BaseModel):
     appendPropId: str = Field('', alias='appendPropId')
 
     @property
-    def prop(self):
+    def prop(self) -> str:
         """Artifact property"""
         if self.mainPropId:
             return self.mainPropId
@@ -17,7 +17,7 @@ class ArtifactProperty(BaseModel):
             return self.appendPropId
 
     @property
-    def value(self):
+    def value(self) -> float:
         """Artifact property value"""
         return self.statValue
 
@@ -59,11 +59,19 @@ class ArtifactFlat(BaseModel):
     *Note: You must called load_lang before otherwise this field is empty*"""
 
     @property
-    def icon_url(self):
+    def icon_url(self) -> str:
         """
         :return: Artifact icon url from https://enka.shinshin.moe/ui/
         """
         return f'https://enka.shinshin.moe/ui/{self.icon}.png'
+
+    @property
+    def name(self):
+        return self.nameText
+
+    @property
+    def set_name(self):
+        return self.setNameText
 
 
 class ArtifactInfo(BaseModel):
@@ -82,7 +90,7 @@ class Artifact(BaseModel):
     """Artifact flat info class, anything inside flat can be access directly in Artifact class too."""
 
     @property
-    def level(self):
+    def level(self) -> int:
         """Artifact level"""
         return self.data.level
 

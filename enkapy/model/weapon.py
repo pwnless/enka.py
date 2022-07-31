@@ -22,6 +22,14 @@ class WeaponFlat(BaseModel):
     rankLevel: int
     weaponStats: List[WeaponStats]
 
+    @property
+    def name(self):
+        return self.nameText
+
+    @property
+    def rank(self):
+        return self.rankLevel
+
 
 class Weapon(BaseModel):
     """Weapon info class"""
@@ -33,9 +41,16 @@ class Weapon(BaseModel):
     """Weapon flat data, anything inside flat can be access directly in Weapon class too."""
 
     @property
-    def level(self):
+    def level(self) -> int:
         """Weapon level"""
         return self.data.level
+
+    @property
+    def refine(self) -> int:
+        for key, val in self.data.affixMap.items():
+            if val:
+                return val + 1
+        return 0
 
     def __getattr__(self, item):
         if hasattr(self.flat, item):

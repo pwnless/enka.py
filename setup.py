@@ -2,13 +2,13 @@ import setuptools
 
 setuptools.setup(
     name="enka.py",
-    version="1.0.6",
+    version="1.0.8",
     author="pwnblog",
-    description="Library for fetching JSON data from site https://enka.shinshin.moe/",
+    description="Library for fetching JSON data from site https://enka.network/",
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/pwnblog/enka.py",
-    keywords=['enkapy.py', 'enkapy', 'enka.shinshin.moe', 'genshinapi'],
+    keywords=['enkapy.py', 'enkapy', 'enka.network', 'genshinapi'],
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

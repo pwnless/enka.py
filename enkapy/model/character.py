@@ -39,6 +39,29 @@ class CharacterProperty(BaseModel):
         use_enum_values = True
 
 
+class CharacterConstellation:
+    name = ''
+    icon = ''
+    id = 0
+    name_hash = 0
+    activated = False
+
+
+class CharacterSkillType(int, Enum):
+    NormalSkill = 0
+    ElementalSkill = 1
+    ElementalBurst = 2
+
+
+class CharacterSkill:
+    name = ''
+    level = 0
+    icon = ''
+    id = 0
+    name_hash = 0
+    type: CharacterSkillType
+
+
 class CharacterInfo(BaseModel):
     """
     Character info class for every character shown in game
@@ -56,15 +79,18 @@ class CharacterInfo(BaseModel):
     "Everything equipped on character, including artifacts and weapon"
     combat: CharacterCombat = Field({}, alias="fightPropMap")
     "Character combat stats"
-    skill_data: List[int] = Field([], alias="inherentProudSkillList")
+    inherentProudSkillList: List[int] = Field([], alias="inherentProudSkillList")
     "Character skill data"
-    skill_id: int = Field(0, alias="skillDepotId")
-    talents: List[int] = Field([], alias='talentIdList')
+    skill_depot_id: int = Field(0, alias="skillDepotId")
+    """Character skill depot id"""
+    internal_constellations: List[int] = Field([], alias='talentIdList')
+    """Internal Character talents"""
+    constellations: Optional[List[CharacterConstellation]] = Field([])
     """Character talents"""
-    skillDepotId: int
-    inherentProudSkillList: List[int]
     skill_level: Dict[int, int] = Field({}, alias="skillLevelMap")
     """Character skill level map, skill_id:skill_level"""
+    skills: Optional[List[CharacterSkill]] = Field([])
+    """Character skill info"""
 
     @property
     def artifacts(self) -> List[Artifact]:
@@ -85,3 +111,16 @@ class CharacterInfo(BaseModel):
         for _ in self.equipList:
             if isinstance(_, Weapon):
                 return _
+
+    def activate_constellation(self):
+        for c in self.constellations:
+            if c.id in self.internal_constellations:
+                c.activated = True
+
+    def process_skill(self):
+        for s in self.skills:
+            if s.id in self.skill_level:
+                s.level = self.skill_level[s.id]
+
+    class Config:
+        arbitrary_types_allowed = True
