@@ -4,14 +4,21 @@ from enkapy import Enka
 
 client = Enka()
 
+
 async def main():
     await client.load_lang()
     user = await client.fetch_user(104267816)
     print(f"Nickname: {user.player.nickname}")
     print(f"Level: {user.player.level}")
+    print(f'Signature: {user.player.signature}')
+    print(f'World level:{user.player.worldLevel}')
+    print(f'Abyss: {user.player.towerFloorIndex}-{user.player.towerLevelIndex}')
     # fetch first character
     character = user.characters[0]
     print(f'Name: {character.name}')
+    print(f'Ascension: {character.ascension}')
+    print(f'Level: {character.level}')
+    print(f'Exp: {character.experience}')
     print('Weapon:')
     weapon = character.weapon
     print(f'\tName: {weapon.name}')
@@ -33,7 +40,7 @@ async def main():
             print(f'\tElemental burst {skill.name}, level:{skill.level}')
     print('Artifacts:')
     for artifact in character.artifacts:
-        print(f'\t{artifact.setNameText} {artifact.nameText}:')
+        print(f'\t{artifact.set_name} {artifact.name}:')
         print(f'\t{artifact.main_stat.prop}:{artifact.main_stat.value}')
         for sub_stats in artifact.sub_stats:
             print(f'\t\t{sub_stats.prop}:{sub_stats.value}')
