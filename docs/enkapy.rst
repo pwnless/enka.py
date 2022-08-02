@@ -19,6 +19,7 @@ enkapy.client module
    :members:
    :undoc-members:
    :show-inheritance:
+   :exclude-members:
 
 enkapy.exception module
 -----------------------

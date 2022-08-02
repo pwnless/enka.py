@@ -22,7 +22,7 @@ copyright = '2022, pwnblog'
 author = 'pwnblog'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.6'
+release = '1.0.8'
 
 
 # -- General configuration ---------------------------------------------------
@@ -48,8 +48,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
-
+html_theme = 'agogo'
+# master_doc = "contents"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
