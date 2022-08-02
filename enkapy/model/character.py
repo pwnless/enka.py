@@ -93,6 +93,27 @@ class CharacterInfo(BaseModel):
     """Character skill info"""
 
     @property
+    def ascension(self):
+        for key, val in self.properties.items():
+            if int(key) == CharacterPropertyType.ASCENSION:
+                return val.ival
+        return 0
+
+    @property
+    def level(self):
+        for key, val in self.properties.items():
+            if int(key) == CharacterPropertyType.LEVEL:
+                return val.ival
+        return 0
+
+    @property
+    def experience(self):
+        for key, val in self.properties.items():
+            if int(key) == CharacterPropertyType.XP:
+                return val.ival
+        return 0
+
+    @property
     def artifacts(self) -> List[Artifact]:
         """
         :return: Artifact lists equipped on character
