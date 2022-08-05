@@ -1,10 +1,10 @@
-from typing import List,Optional
+from typing import List, Optional
 
 from pydantic import BaseModel
 
 
 class ProfilePicture(BaseModel):
-    avatarId: int
+    avatarId: Optional[int]
 
 
 class ShowAvatar(BaseModel):
@@ -24,7 +24,7 @@ class PlayerInfo(BaseModel):
     """Player level"""
     nameCardId: int
     """Player name card background id"""
-    nickname: str
+    nickname: Optional[str]
     """Player nickname"""
     signature: Optional[str]
     """Player signature"""
