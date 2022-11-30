@@ -22,7 +22,7 @@ class Enka:
     _URL = "https://enka.network/u/{uid}/__data.json"
     # https://github.com/theBowja/GenshinData-1
     # https://raw.githubusercontent.com/GrownNed/Homework/master
-    _REPO_BASE = 'https://raw.githubusercontent.com/theBowja/GenshinData-1/master'
+    _REPO_BASE = 'https://gitlab.com/Dimbreath/gamedata/-/raw/main/'
     _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json'
     _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json'
     _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json'
