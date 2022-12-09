@@ -5,7 +5,7 @@ Friendly API for fetching genshin user data from https://enka.shinshin.moe/ (Now
 
 Added name parsing and full artifact support and more elegant code.
 
-original from https://github.com/mrwan200/EnkaNetwork.py
+original from https://github.com/mrwan200/EnkaNetwork.py, but better!
 
 # Documentation
 
