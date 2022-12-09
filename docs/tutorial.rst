@@ -50,6 +50,8 @@ in genshin TextMap json file.
 
 We automated this process, just pass the correct language value(default 'en') and call :py:func:`enkapy.client.Enka.load_lang`
 
+*New in 1.1.0: Now load_lang has cache! check ``force_cache`` and ``force_update`` parameters!*
+
 *Note: if you don't load language data, all name field in returned object will be empty string*
 
 Player basic info

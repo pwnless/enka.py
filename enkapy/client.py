@@ -1,4 +1,5 @@
 import json
+import os.path
 
 import aiohttp
 from aiocache import cached
@@ -22,12 +23,12 @@ class Enka:
     _URL = "https://enka.network/u/{uid}/__data.json"
     # https://github.com/theBowja/GenshinData-1
     # https://raw.githubusercontent.com/GrownNed/Homework/master
-    _REPO_BASE = 'https://gitlab.com/Dimbreath/gamedata/-/raw/main/'
-    _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json'
-    _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json'
-    _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json'
-    _SKILL_DEPOT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillDepotExcelConfigData.json'
-    _SKILL_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillExcelConfigData.json'
+    _REPO_BASE = 'https://gitlab.com/Dimbreath/gamedata/-/raw/main'
+    _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json?inline=false'
+    _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json?inline=false'
+    _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json?inline=false'
+    _SKILL_DEPOT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillDepotExcelConfigData.json?inline=false'
+    _SKILL_URL = _REPO_BASE + '/ExcelBinOutput/AvatarSkillExcelConfigData.json?inline=false'
     USER_AGENT = "Mozilla/5.0"
     timeout = 30
     """Http connection timeout"""
@@ -45,32 +46,120 @@ class Enka:
     """Internal skill data"""
     lang = 'en'
     """Language for text hash resolve"""
+    _cache = 'cache'
+    """Cache folder name"""
 
-    async def load_lang(self, lang='en'):
+    def _cache_exists(self, name):
         """
-        Load language data from Dimbreath repo
+        Check if cache file exists and return full cache file path
+        :param name: cache name
+        :return: full cache file path
+        """
+        package_path = os.path.dirname(os.path.realpath(__file__))
+        cache_path = os.path.join(package_path, self._cache)
+        cache_file_path = os.path.join(cache_path, name)
+
+        if not os.path.exists(cache_path):
+            try:
+                os.mkdir(cache_path)
+            except OSError:
+                pass
+            return ''
+        if not os.path.isdir(cache_path):
+            try:
+                os.remove(cache_path)
+            except OSError:
+                pass
+            return ''
+        if os.path.exists(cache_file_path):
+            return cache_file_path
+        else:
+            return ''
+
+    async def _process_cache(self, client: aiohttp.ClientSession, url, cache_file, force_cache=False,
+                             force_update=False):
+        """
+        Process cache
+        :param client: aiohttp client
+        :param url: git url
+        :param cache_file: cache file name
+        :param force_cache: ignore git update, force using cache file
+        :param force_update: force update from git repo
+        :return: cache file path
+        """
+        cache_file_path = self._cache_exists(cache_file)
+        if cache_file_path and not force_update:
+            stat = os.stat(cache_file_path)
+            file_size = stat.st_size
+            if not force_cache:
+                resp = await client.head(url, proxy=self.proxy)
+                cl = int(resp.headers['Content-Length'])
+                if cl != file_size:
+                    resp = await client.get(url, proxy=self.proxy)
+                    with open(cache_file_path, 'wb') as f:
+                        f.write(await resp.read())
+        else:
+            package_path = os.path.dirname(os.path.realpath(__file__))
+            cache_path = os.path.join(package_path, self._cache)
+            cache_file_path = os.path.join(cache_path, cache_file)
+            resp = await client.get(url, proxy=self.proxy)
+            with open(cache_file_path, 'wb') as f:
+                f.write(await resp.read())
+        return cache_file_path
+
+    async def load_lang(self, lang='en', force_cache=False, force_update=False):
+        """
+        Load language data from cache or Dimbreath repo
         :param lang: language you want to load, default 'en'
+        :param force_cache: Do not check repo update if cache file exists
+        :param force_update: force update from git repo
         """
+
         async with aiohttp.ClientSession(headers={"User-Agent": self.USER_AGENT}) as client:
             if lang not in self._lang_data:
-                resp = await client.get(self._LANG_URL.format(lang=lang.upper()), proxy=self.proxy)
-                self._lang_data[lang] = await resp.json(content_type=None)
+                cache_file_path = await self._process_cache(client,
+                                                            self._LANG_URL.format(lang=lang.upper()),
+                                                            'lang.json',
+                                                            force_cache,
+                                                            force_update)
+                with open(cache_file_path, 'rb') as f:
+                    self._lang_data[lang] = json.load(f)
             if not self._avatar_data:
-                resp = await client.get(self._AVATAR_URL, proxy=self.proxy)
-                for x in await resp.json(content_type=None):
-                    self._avatar_data[x['id']] = x
+                cache_file_path = await self._process_cache(client,
+                                                            self._AVATAR_URL,
+                                                            'avatar.json',
+                                                            force_cache,
+                                                            force_update)
+                with open(cache_file_path, 'rb') as f:
+                    for x in json.load(f):
+                        self._avatar_data[x['id']] = x
             if not self._skill_depot_data:
-                resp = await client.get(self._SKILL_DEPOT_URL, proxy=self.proxy)
-                for x in await resp.json(content_type=None):
-                    self._skill_depot_data[x['id']] = x
+                cache_file_path = await self._process_cache(client,
+                                                            self._SKILL_DEPOT_URL,
+                                                            'skill_depot.json',
+                                                            force_cache,
+                                                            force_update)
+                with open(cache_file_path, 'rb') as f:
+                    for x in json.load(f):
+                        self._skill_depot_data[x['id']] = x
             if not self._skill_data:
-                resp = await client.get(self._SKILL_URL, proxy=self.proxy)
-                for x in await resp.json(content_type=None):
-                    self._skill_data[x['id']] = x
+                cache_file_path = await self._process_cache(client,
+                                                            self._SKILL_URL,
+                                                            'skill.json',
+                                                            force_cache,
+                                                            force_update)
+                with open(cache_file_path, 'rb') as f:
+                    for x in json.load(f):
+                        self._skill_data[x['id']] = x
             if not self._talent_data:
-                resp = await client.get(self._TALENT_URL, proxy=self.proxy)
-                for x in await resp.json(content_type=None):
-                    self._talent_data[x['talentId']] = x
+                cache_file_path = await self._process_cache(client,
+                                                            self._TALENT_URL,
+                                                            'talent.json',
+                                                            force_cache,
+                                                            force_update)
+                with open(cache_file_path, 'rb') as f:
+                    for x in json.load(f):
+                        self._talent_data[x['talentId']] = x
 
     async def resolve_text_hash(self, text_hash, lang='en'):
         """
@@ -121,14 +210,15 @@ class Enka:
         for character in obj.characters:
             if character.skill_depot_id in self._skill_depot_data:
                 depot = self._skill_depot_data[character.skill_depot_id]
-                burst_id = depot['energySkill']
-                if burst_id in self._skill_data:
-                    cs = CharacterSkill()
-                    cs.id = burst_id
-                    cs.type = CharacterSkillType.ElementalBurst
-                    cs.name_hash = self._skill_data[burst_id]['nameTextMapHash']
-                    cs.icon = self._skill_data[burst_id]['skillIcon']
-                    character.skills.append(cs)
+                if 'energySkill' in depot:
+                    burst_id = depot['energySkill']
+                    if burst_id in self._skill_data:
+                        cs = CharacterSkill()
+                        cs.id = burst_id
+                        cs.type = CharacterSkillType.ElementalBurst
+                        cs.name_hash = self._skill_data[burst_id]['nameTextMapHash']
+                        cs.icon = self._skill_data[burst_id]['skillIcon']
+                        character.skills.append(cs)
                 for skill_id in depot['skills']:
                     if skill_id and skill_id in self._skill_data:
                         skill_info = self._skill_data[skill_id]

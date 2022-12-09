@@ -63,7 +63,7 @@ class ArtifactFlat(BaseModel):
         """
         :return: Artifact icon url from https://enka.shinshin.moe/ui/
         """
-        return f'https://enka.shinshin.moe/ui/{self.icon}.png'
+        return f'https://enka.network/ui/{self.icon}.png'
 
     @property
     def name(self):

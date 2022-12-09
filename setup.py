@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="enka.py",
-    version="1.0.12",
+    version="1.1.0",
     author="pwnblog",
     description="Library for fetching JSON data from site https://enka.network/",
     long_description=open("README.md", "r", encoding="utf-8").read(),
@@ -15,6 +15,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    zip_safe=False,
     install_requires=[
         "pydantic",
         "aiohttp",
