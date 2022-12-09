@@ -52,6 +52,7 @@ class Enka:
     def _cache_exists(self, name):
         """
         Check if cache file exists and return full cache file path
+
         :param name: cache name
         :return: full cache file path
         """
@@ -80,6 +81,7 @@ class Enka:
                              force_update=False):
         """
         Process cache
+
         :param client: aiohttp client
         :param url: git url
         :param cache_file: cache file name
@@ -110,6 +112,7 @@ class Enka:
     async def load_lang(self, lang='en', force_cache=False, force_update=False):
         """
         Load language data from cache or Dimbreath repo
+
         :param lang: language you want to load, default 'en'
         :param force_cache: Do not check repo update if cache file exists
         :param force_update: force update from git repo
@@ -164,6 +167,7 @@ class Enka:
     async def resolve_text_hash(self, text_hash, lang='en'):
         """
         Resolve text hash to actual text
+
         :param text_hash: text hash
         :param lang: language you want to resolve to
         :return: resolved text
