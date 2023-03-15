@@ -70,9 +70,9 @@ Example::
 
 Result::
 
-    Nickname: 天天向上
+    Nickname: Player nickname
     Level: 60
-    Signature: 凌人有点无脑
+    Signature: Player's signature
     World level:8
     Abyss: 12-3
 
