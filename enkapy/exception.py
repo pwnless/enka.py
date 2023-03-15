@@ -1,6 +1,30 @@
-class ValidateUIDError(Exception):
+class EnkaError(Exception):
     pass
 
 
-class UIDNotFounded(Exception):
+class ValidateUIDError(EnkaError):
+    pass
+
+
+class UIDNotFounded(EnkaError):
+    pass
+
+
+class WrongUIDFormat(EnkaError):
+    pass
+
+
+class PlayerDoesNOTExist(EnkaError):
+    pass
+
+
+class GameMaintenance(EnkaError):
+    pass
+
+
+class RateLimited(EnkaError):
+    pass
+
+
+class GeneralServerError(EnkaError):
     pass
