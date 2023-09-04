@@ -18,11 +18,11 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'enka.py'
-copyright = '2022, pwnblog'
-author = 'pwnblog'
+copyright = '2023, pwnless'
+author = 'pwnless'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1.4'
+release = '1.1.5'
 
 
 # -- General configuration ---------------------------------------------------
