@@ -11,7 +11,7 @@ class WeaponInfo(BaseModel):
 
 class WeaponStats(BaseModel):
     appendPropId: str
-    statValue: int
+    statValue: float
 
 
 class WeaponFlat(BaseModel):

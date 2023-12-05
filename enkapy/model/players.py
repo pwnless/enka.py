@@ -8,7 +8,7 @@ class ProfilePicture(BaseModel):
 
 
 class ShowAvatar(BaseModel):
-    avatarId: str
+    avatarId: int
     """Character id"""
     level: int
     """Character level"""
