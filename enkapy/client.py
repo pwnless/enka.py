@@ -23,7 +23,7 @@ class Enka:
     _URL = "https://enka.network/api/uid/{uid}"
     # https://github.com/theBowja/GenshinData-1
     # https://raw.githubusercontent.com/GrownNed/Homework/master
-    _REPO_BASE = 'https://gitlab.com/Dimbreath/gamedata/-/raw/master'
+    _REPO_BASE = 'https://gitlab.com/Dimbreath/AnimeGameData/-/raw/master'
     _LANG_URL = _REPO_BASE + '/TextMap/TextMap{lang}.json?inline=false'
     _AVATAR_URL = _REPO_BASE + '/ExcelBinOutput/AvatarExcelConfigData.json?inline=false'
     _TALENT_URL = _REPO_BASE + '/ExcelBinOutput/AvatarTalentExcelConfigData.json?inline=false'
@@ -226,7 +226,7 @@ class Enka:
             if not data:
                 raise EnkaError(f'Unknown error[No Data]')
 
-        obj: EnkaData = EnkaData.parse_obj(data)
+        obj: EnkaData = EnkaData.model_validate(data)
 
         if not player_only:
             for character in obj.characters:
@@ -267,7 +267,7 @@ class Enka:
                     for equip in character.equipList:
                         equip.flat.nameText = await self.resolve_text_hash(equip.flat.nameTextMapHash, self.lang)
                         if isinstance(equip, Artifact):
-                            equip.flat.setNameText = await self.resolve_text_hash(equip.flat.setNameTextMapHash,
+                            equip.flat.nameTextMapHash = await self.resolve_text_hash(equip.flat.setNameTextMapHash,
                                                                                   self.lang)
                     if character.id in self._avatar_data:
                         character.name = await self.resolve_text_hash(

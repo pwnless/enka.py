@@ -23,7 +23,7 @@ class ArtifactProperty(BaseModel):
 
 
 class ArtifactFlat(BaseModel):
-    equipType: str
+    itemType: str
     """Artifact equip types
     
     EQUIP_BRACER: flower
@@ -53,7 +53,7 @@ class ArtifactFlat(BaseModel):
     """Artifact sub stats"""
     setNameTextMapHash: str
     """Artifact name hash"""
-    setNameText: Optional[str] = Field('')
+    nameTextMapHash: Optional[str] = Field('')
     """Artifact set name text
     
     *Note: You must called load_lang before otherwise this field is empty*"""
