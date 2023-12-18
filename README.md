@@ -1,5 +1,5 @@
 # Enka.py
-[![Downloads](https://static.pepy.tech/badge/enka-py)](https://pepy.tech/project/enka-py) [![Downloads](https://static.pepy.tech/badge/enka-py/month)](https://pepy.tech/project/enka-py) ![](https://img.shields.io/pypi/v/enka.py)
+[![Downloads](https://static.pepy.tech/badge/enka-py)](https://pepy.tech/project/enka-py) [![Downloads](https://static.pepy.tech/badge/enka-py/month)](https://pepy.tech/project/enka-py) ![](https://img.shields.io/pypi/v/enka.py) [![Documentation Status](https://readthedocs.org/projects/enkapy/badge/?version=latest)](https://enkapy.readthedocs.io/en/latest/?badge=latest)
 
 Friendly API for fetching genshin user data from https://enka.shinshin.moe/ (Now https://enka.network)
 
