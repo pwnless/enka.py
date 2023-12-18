@@ -23,7 +23,7 @@ class ArtifactProperty(BaseModel):
 
 
 class ArtifactFlat(BaseModel):
-    itemType: str
+    equipType: str
     """Artifact equip types
     
     EQUIP_BRACER: flower

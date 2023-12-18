@@ -228,7 +228,7 @@ class Enka:
 
         obj: EnkaData = EnkaData.model_validate(data)
 
-        if not player_only:
+        if not player_only and obj.characters:
             for character in obj.characters:
                 if character.skill_depot_id in self._skill_depot_data:
                     depot = self._skill_depot_data[character.skill_depot_id]

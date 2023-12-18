@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -10,6 +10,6 @@ class EnkaData(BaseModel):
     """All data about the player"""
     player: PlayerInfo = Field({}, alias="playerInfo")
     """Basic player info"""
-    characters: List[CharacterInfo] = Field([], alias="avatarInfoList")
+    characters: Optional[List[CharacterInfo]] = Field([], alias="avatarInfoList")
     """Player characters shown in game"""
     ttl: int = 0

@@ -26,14 +26,14 @@ class PlayerInfo(BaseModel):
     """Player name card background id"""
     nickname: Optional[str]
     """Player nickname"""
-    signature: Optional[str]
+    signature: Optional[str] = ''
     """Player signature"""
     worldLevel: Optional[int]
     """Player world level"""
     profilePicture: ProfilePicture
     """Player profile picture"""
 
-    showAvatarInfoList: Optional[List[ShowAvatar]]
+    showAvatarInfoList: Optional[List[ShowAvatar]] = []
     """Player characters shown"""
 
     towerFloorIndex: Optional[int]
