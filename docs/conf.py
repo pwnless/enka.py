@@ -22,7 +22,7 @@ copyright = '2023, pwnless'
 author = 'pwnless'
 
 # The full version, including alpha/beta/rc tags
-release = '1.1.5'
+release = '1.1.8'
 
 
 # -- General configuration ---------------------------------------------------
