@@ -267,8 +267,7 @@ class Enka:
                     for equip in character.equipList:
                         equip.flat.nameText = await self.resolve_text_hash(equip.flat.nameTextMapHash, self.lang)
                         if isinstance(equip, Artifact):
-                            equip.flat.nameTextMapHash = await self.resolve_text_hash(equip.flat.setNameTextMapHash,
-                                                                                  self.lang)
+                            equip.flat.setNameText = await self.resolve_text_hash(equip.flat.setNameTextMapHash, self.lang)
                     if character.id in self._avatar_data:
                         character.name = await self.resolve_text_hash(
                             self._avatar_data[character.id]['nameTextMapHash'],

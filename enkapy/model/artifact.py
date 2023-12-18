@@ -53,7 +53,7 @@ class ArtifactFlat(BaseModel):
     """Artifact sub stats"""
     setNameTextMapHash: str
     """Artifact name hash"""
-    nameTextMapHash: Optional[str] = Field('')
+    setNameText: Optional[str] = Field('')
     """Artifact set name text
     
     *Note: You must called load_lang before otherwise this field is empty*"""
