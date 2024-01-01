@@ -27,7 +27,7 @@ client = Enka()
 
 async def main():
     await client.load_lang()
-    user = await client.fetch_user(748694067)
+    user = await client.fetch_user(104267816)
     print(f"Nickname: {user.player.nickname}")
     print(f"Level: {user.player.level}")
     print(f'Signature: {user.player.signature}')
