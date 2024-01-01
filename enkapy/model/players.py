@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 class ProfilePicture(BaseModel):
-    avatarId: Optional[int]
+    id: Optional[int]
 
 
 class ShowAvatar(BaseModel):
