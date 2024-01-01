@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 class WeaponInfo(BaseModel):
     level: int
     affixMap: Optional[Dict[int, int]]
-    promoteLevel: Optional[int]
+    promoteLevel: Optional[int] = Field(0)
 
 
 class WeaponStats(BaseModel):
