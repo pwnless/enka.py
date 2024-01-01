@@ -4,7 +4,18 @@ from pydantic import BaseModel
 
 
 class ProfilePicture(BaseModel):
-    id: Optional[int]
+    avatarId1: Optional[int] = Field(0, alias='id')
+    avatarId2: Optional[int] = Field(0, alias='avatarId')
+
+    @property
+    def avatarId(self):
+        if self.avatarId1:
+            return self.avatarId1
+        elif self.avatarId2:
+            return self.avatarId2
+        else:
+            return 0
+
 
 
 class ShowAvatar(BaseModel):
