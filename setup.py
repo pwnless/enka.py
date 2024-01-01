@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="enka.py",
-    version="1.1.8",
+    version="1.2.1",
     author="pwnless",
     author_email="mystream@riseup.net",
     description="Library for fetching JSON data from site https://enka.network/",
